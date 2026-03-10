@@ -44,6 +44,7 @@ Macro F1 — which treats all 3 classes equally — was the only honest measure.
 🌍 Which country performs best?
 
 Real data extracted directly from the training dataset:
+
 Country      High %           Low %       Medium %      Verdict
 
 🇸🇿 Eswatini    11.5%          51.4%        37.1%          ✅ Regional benchmark
@@ -106,7 +107,16 @@ Access to formal financial services drives long-term resilience.
 
 ⚠️ Where does the model struggle?
 
-WeaknessWhy It HappensWhat Was DoneHigh class recall only 0.61Only 470 High examples in 9,618SMOTE oversampling appliedFold 1 lowest at 0.784Country distribution varianceCountry-stratified CV usedMedium/Low confusionSimilar survey profilesThreshold tuning (Medium = 0.45)Lesotho 0.3% HighNear-zero examplesFlagged as highest priority gap
+Weakness      Why It Happens      What Was Done  
+
+High class recall only 0.61    Only 470 High examples in 9,618    SMOTE oversampling applied
+
+Fold 1 lowest at 0.784    Country distribution variance      Country-stratified CV used
+
+Medium/Low confusion    Similar survey profiles    Threshold tuning (Medium = 0.45)
+
+Lesotho 0.3% High         Near-zero examples             Flagged as highest priority gap
+
 The model is honest about its limits. High recall at 0.61 means 39% of
 High-health businesses are still being missed — a real constraint that
 field programs should account for when using predictions.
